@@ -7,10 +7,18 @@ import projectDetail from "../assets/project-detail.jpg";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Pascal Engineering — Advanced Steel Structures" },
-      { name: "description", content: "Pascal Engineering designs high-tolerance steel systems for the next generation of civil architecture. Exacting standards, permanent solutions." },
+      { title: "Pascal Engineering | Advanced Steel Structures" },
+      {
+        name: "description",
+        content:
+          "Pascal Engineering designs high-tolerance steel systems for the next generation of civil architecture. Exacting standards, permanent solutions.",
+      },
       { property: "og:title", content: "Pascal Engineering — Advanced Steel Structures" },
-      { property: "og:description", content: "Pascal Engineering designs high-tolerance steel systems for the next generation of civil architecture." },
+      {
+        property: "og:description",
+        content:
+          "Pascal Engineering designs high-tolerance steel systems for the next generation of civil architecture.",
+      },
     ],
   }),
   component: HomePage,
@@ -38,7 +46,8 @@ function HomePage() {
                 Structural integrity through <span className="text-copper">advanced</span> material science.
               </h1>
               <p className="text-lg md:text-xl text-zinc-400 leading-relaxed text-pretty">
-                Pascal Engineering designs high-tolerance steel systems for the next generation of civil architecture. Exacting standards, permanent solutions.
+                Pascal Engineering designs high-tolerance steel systems for the next generation of civil architecture.
+                Exacting standards, permanent solutions.
               </p>
             </div>
           </div>
@@ -98,9 +107,7 @@ function HomePage() {
                 <span className="block text-copper font-medium mb-2 uppercase tracking-widest text-xs">
                   Featured Work
                 </span>
-                <h2 className="font-display text-3xl text-zinc-100 font-medium">
-                  The Obsidian Terminal
-                </h2>
+                <h2 className="font-display text-3xl text-zinc-100 font-medium">The Obsidian Terminal</h2>
               </div>
               <Link
                 to="/projects"
@@ -137,9 +144,7 @@ function HomePage() {
                   <p className="text-zinc-100 text-lg font-medium mb-4 italic leading-snug">
                     "A masterclass in restraint. Every bolt serves a purpose, every beam defines a space."
                   </p>
-                  <span className="text-xs uppercase tracking-widest text-zinc-500">
-                    Architecture Digest, 2024
-                  </span>
+                  <span className="text-xs uppercase tracking-widest text-zinc-500">Architecture Digest, 2024</span>
                 </div>
               </div>
             </div>
@@ -178,9 +183,7 @@ function HomePage() {
 function ServiceCard({ title, description }: { title: string; description: string }) {
   return (
     <div className="bg-charcoal p-8 flex flex-col gap-4">
-      <div className="text-zinc-500 text-xs font-medium uppercase tracking-tighter">
-        Service
-      </div>
+      <div className="text-zinc-500 text-xs font-medium uppercase tracking-tighter">Service</div>
       <h3 className="text-zinc-100 text-xl font-medium">{title}</h3>
       <p className="text-sm text-pretty leading-relaxed">{description}</p>
     </div>
