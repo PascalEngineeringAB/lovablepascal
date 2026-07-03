@@ -23,8 +23,8 @@ function ProjectsPage() {
       year: "2024",
       description:
         "A 45,000 sq m cantilevered steel terminal structure requiring millimeter-precision engineering. The roof spans 120 meters without internal columns, creating an uninterrupted passenger experience.",
-      image: projectTerminal,
-      imageAlt: "Minimalist black steel airport terminal interior",
+      image: projectShip,
+      imageAlt: "Steel cargo vessel in industrial port at dusk",
     },
     {
       id: "02",
