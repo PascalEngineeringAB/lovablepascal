@@ -31,6 +31,15 @@ jobs:
       - name: Build
         run: bun run build
 
+      # GitHub Pages serves via Jekyll by default, which strips files/folders
+      # starting with "_" (breaks Vite's _assets, _tanstack, etc.).
+      # Also copy index.html → 404.html so any unknown deep link falls back
+      # to the SPA shell instead of GitHub's default 404 page.
+      - name: Prepare Pages artifact
+        run: |
+          touch dist/client/.nojekyll
+          cp dist/client/index.html dist/client/404.html
+
       - name: Setup Pages
         uses: actions/configure-pages@v5
 
