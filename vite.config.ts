@@ -19,7 +19,7 @@ export default defineConfig({
       },
     },
   },
-  nitro: {
-    preset: "static",
-  },
+  // Disable nitro entirely — GitHub Pages serves the SPA shell + assets
+  // straight from dist/client, no server runtime needed.
+  nitro: false,
 });
