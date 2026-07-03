@@ -13,7 +13,7 @@ export const Route = createFileRoute("/")({
         content:
           "Pascal Engineering designs high-tolerance steel systems for the next generation of civil architecture. Exacting standards, permanent solutions.",
       },
-      { property: "og:title", content: "Pascal Engineering — Advanced Steel Structures" },
+      { property: "og:title", content: "Pascal Engineering | Advanced Steel Structures" },
       {
         property: "og:description",
         content:
