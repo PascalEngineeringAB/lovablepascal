@@ -1,7 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight } from "lucide-react";
-import heroSteel from "../assets/hero-steel.jpg";
-import projectTerminal from "../assets/project-terminal.jpg";
+import heroBridge from "../assets/hero-bridge.jpg";
+import projectShip from "../assets/project-ship.jpg";
 import projectDetail from "../assets/project-detail.jpg";
 
 export const Route = createFileRoute("/")({
@@ -23,8 +23,8 @@ function HomePage() {
       <section className="relative h-[90vh] flex items-end overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img
-            src={heroSteel}
-            alt="Steel skyscraper frame against twilight sky"
+            src={heroBridge}
+            alt="Steel suspension bridge against dark twilight sky"
             className="w-full h-full object-cover opacity-60"
             width={1920}
             height={1080}
@@ -116,8 +116,8 @@ function HomePage() {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               <div className="md:col-span-2">
                 <img
-                  src={projectTerminal}
-                  alt="Minimalist black steel airport terminal interior"
+                  src={projectShip}
+                  alt="Steel cargo vessel in industrial port at dusk"
                   className="w-full aspect-[16/10] object-cover rounded-xl"
                   width={1200}
                   height={800}
