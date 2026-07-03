@@ -25,9 +25,5 @@ export default defineConfig({
   // artifact contains index.html + hashed assets and nothing else.
   nitro: {
     preset: "static",
-    output: {
-      dir: "dist",
-      publicDir: "dist/client",
-    },
   },
 });
