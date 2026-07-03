@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import projectTerminal from "../assets/project-terminal.jpg";
+import projectShip from "../assets/project-ship.jpg";
 import projectDetail from "../assets/project-detail.jpg";
 
 export const Route = createFileRoute("/projects")({

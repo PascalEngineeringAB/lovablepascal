@@ -1,7 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight } from "lucide-react";
-import heroSteel from "../assets/hero-steel.jpg";
-import projectTerminal from "../assets/project-terminal.jpg";
+import heroBridge from "../assets/hero-bridge.jpg";
+import projectShip from "../assets/project-ship.jpg";
 import projectDetail from "../assets/project-detail.jpg";
 
 export const Route = createFileRoute("/")({
