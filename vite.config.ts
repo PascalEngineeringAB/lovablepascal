@@ -5,16 +5,20 @@ export default defineConfig({
     base: "/lovablepascal/",
   },
   tanstackStart: {
-    // Prerender every route to static HTML so the build outputs index.html
-    // files that GitHub Pages can serve without a runtime server.
-    prerender: {
+    // SPA mode: skip SSR and emit a client-side shell that TanStack Router
+    // hydrates in the browser. GitHub Pages just serves the shell and assets.
+    spa: {
       enabled: true,
-      crawlLinks: true,
-      routes: ["/", "/about", "/services", "/projects", "/contact"],
+      maskPath: "/",
+      prerender: {
+        enabled: true,
+        outputPath: "/index.html",
+        crawlLinks: true,
+        retryCount: 0,
+        autoSubfolderIndex: true,
+      },
     },
   },
-  // Emit a plain static site (no Cloudflare worker) so the GitHub Pages
-  // artifact contains index.html + hashed assets and nothing else.
   nitro: {
     preset: "static",
   },
