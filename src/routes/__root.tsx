@@ -1,4 +1,3 @@
-import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import {
   Outlet,
   Link,
@@ -77,14 +76,13 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
-      { name: "description", content: "Lovable Generated Project" },
-      { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "Lovable Generated Project" },
+      { title: "Pascal Engineering — Advanced Steel Structures" },
+      { name: "description", content: "Pascal Engineering specializes in civil and structural engineering, designing advanced steel structures for the next generation of architecture." },
+      { name: "author", content: "Pascal Engineering" },
+      { property: "og:title", content: "Pascal Engineering — Advanced Steel Structures" },
+      { property: "og:description", content: "Pascal Engineering specializes in civil and structural engineering, designing advanced steel structures for the next generation of architecture." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:site", content: "@Lovable" },
     ],
     links: [
       {
@@ -92,6 +90,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         href: appCss,
       },
       { rel: "icon", href: "/favicon.ico", type: "image/x-icon" },
+      { rel: "stylesheet", href: "https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600&family=Public+Sans:wght@400;500&display=swap" },
     ],
   }),
   shellComponent: RootShell,
@@ -100,9 +99,11 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
   errorComponent: ErrorComponent,
 });
 
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+
 function RootShell({ children }: { children: ReactNode }) {
   return (
-    <html lang="en">
+    <html lang="en" className="dark">
       <head>
         <HeadContent />
       </head>
@@ -114,13 +115,17 @@ function RootShell({ children }: { children: ReactNode }) {
   );
 }
 
+import { Nav } from "../components/Nav";
+import { Footer } from "../components/Footer";
+
 function RootComponent() {
   const { queryClient } = Route.useRouteContext();
 
   return (
     <QueryClientProvider client={queryClient}>
-      {/* Required: nested routes render here. Removing <Outlet /> breaks all child routes. */}
+      <Nav />
       <Outlet />
+      <Footer />
     </QueryClientProvider>
   );
 }
